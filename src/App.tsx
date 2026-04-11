@@ -89,8 +89,8 @@ const TeamMember = ({ name, role, image, delay }: TeamMemberProps) => {
         <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
           <div className="flex gap-4">
-            <button className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Link size={18} /></button>
-            <button className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Mail size={18} /></button>
+            <button onClick={() => window.open('https://wa.me/918802585850', '_blank')} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Link size={18} /></button>
+            <button onClick={() => window.open('mailto: kumar.satvinder5@gmail.com', '_blank')} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Mail size={18} /></button>
           </div>
         </div>
       </div>
@@ -453,7 +453,7 @@ const Contact = () => {
               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-colors">
                 <Mail className="text-blue-600 mb-4" size={24} />
                 <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Email Inquiry</p>
-                <p className="text-lg font-black text-slate-900">info@bskfin.com</p>
+                <p className="text-lg font-black text-slate-900">kumar.satvinder5@gmail.com</p>
               </div>
             </div>
             <div className="bg-blue-50 p-8 rounded-3xl flex items-start gap-6 border border-blue-100">
