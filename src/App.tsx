@@ -20,9 +20,9 @@ import {
 } from 'lucide-react';
 
 // --- Custom Hooks ---
-const useScrollReveal = (): [React.RefObject<HTMLDivElement | null>, boolean] => {
+const useScrollReveal = (): [React.MutableRefObject<HTMLDivElement | null>, boolean] => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,10 +31,13 @@ const useScrollReveal = (): [React.RefObject<HTMLDivElement | null>, boolean] =>
           setIsVisible(true);
           observer.unobserve(entry.target);
         }
-      },
-      { threshold: 0.1 }
+      }
     );
-    if (ref.current) observer.observe(ref.current);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 
@@ -115,7 +118,7 @@ const ServiceCard = ({ icon: Icon, title, desc, delay }: ServiceCardProps) => {
   const [ref, isVisible] = useScrollReveal();
   return (
     <div
-      ref={ref}
+      ref={ref as React.RefObject<HTMLDivElement>}
       style={{ transitionDelay: `${delay}ms` }}
       className={`group bg-white p-10 rounded-[40px] shadow-sm border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
     >
