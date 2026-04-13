@@ -395,7 +395,6 @@ const TeamView = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {([
-          { name: "Arjun Singh", role: "Senior Manager (SM)", image: "ArjunSingh.jpeg" },
           { name: "Sandeep Kaur", role: "Senior manager (SM)", image: "Sandeepkaur.jpeg" },
           { name: "depti", role: "Senior manager (SM)", image: "depti.jpeg" },
           { name: "Praveen Kumar", role: "Marketing Sales officer", image: "Praveenkumar.jpeg" },
