@@ -92,7 +92,7 @@ const TeamMember = ({ name, role, image, delay }: TeamMemberProps) => {
         <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
           <div className="flex gap-4">
-            <button onClick={() => window.open('https://wa.me/918802585850', '_blank')} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Link size={18} /></button>
+            <button onClick={() => window.open('https://wa.me/917503075764', '_blank')} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Link size={18} /></button>
             <button onClick={() => window.open('mailto: kumar.satvinder5@gmail.com', '_blank')} className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-blue-600 transition-colors"><Mail size={18} /></button>
           </div>
         </div>
@@ -330,7 +330,7 @@ const HomeView = ({ setView }: HomeViewProps) => (
                 ))}
               </div>
               <button
-                onClick={() => window.open('https://wa.me/918802585850', '_blank')}
+                onClick={() => window.open('https://wa.me/917503075764', '_blank')}
                 className="px-10 py-5 bg-white text-slate-900 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all shadow-2xl"
               >
                 Apply for Positions
@@ -418,7 +418,7 @@ const TeamView = () => (
           <h3 className="text-4xl md:text-5xl font-black tracking-tight">Want to be part of this team?</h3>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">We're always looking for driven individuals to help us redefine the financial services landscape.</p>
           <button
-            onClick={() => window.open('https://wa.me/918802585850', '_blank')}
+            onClick={() => window.open('https://wa.me/917503075764', '_blank')}
             className="px-12 py-5 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
           >
             See Open Roles
@@ -450,7 +450,7 @@ const Contact = () => {
               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-colors">
                 <Phone className="text-blue-600 mb-4" size={24} />
                 <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Call Support</p>
-                <p className="text-lg font-black text-slate-900">+91 88025 85850</p>
+                <p className="text-lg font-black text-slate-900">+91 75030 75764</p>
               </div>
               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-colors">
                 <Mail className="text-blue-600 mb-4" size={24} />
@@ -591,7 +591,7 @@ export default function App() {
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-10 right-10 z-[100] flex flex-col gap-4">
         <button
-          onClick={() => window.open('https://wa.me/918802585850', '_blank')}
+          onClick={() => window.open('https://wa.me/917503075764', '_blank')}
           className="w-16 h-16 bg-[#25D366] text-white rounded-3xl flex items-center justify-center shadow-[0_20px_50px_rgba(37,211,102,0.3)] hover:scale-110 active:scale-95 transition-all group relative"
         >
           <Phone size={28} className="group-hover:rotate-12 transition-transform" />
