@@ -192,8 +192,8 @@ const Navbar = ({ view, setView }: NavbarProps) => {
               key={link.id}
               onClick={() => handleNav(link.id)}
               className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${(view === 'team' && link.id === 'team') || (view === 'main' && link.id === 'main')
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
-                  : scrolled || view === 'team' ? 'text-slate-600 hover:bg-slate-100' : 'text-white/80 hover:bg-white/10'
+                ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
+                : scrolled || view === 'team' ? 'text-slate-600 hover:bg-slate-100' : 'text-white/80 hover:bg-white/10'
                 }`}
             >
               {link.name}
@@ -298,17 +298,17 @@ const HomeView = ({ setView }: HomeViewProps) => (
           {([
             // Replace only the services array inside HomeView's services section:
 
-            { icon: CreditCard, title: "Premium Cards", desc: "Access high-limit credit cards from HDFC, SBI, ICICI & Axis through BSK's banking network. Enjoy airport lounge access, 1.5–5% cashback on everyday spends, fuel surcharge waivers, and travel perks. Premium cards available with annual fees from ₹5,000–₹50,000. Eligibility: 750+ CIBIL score, min. income ₹3 LPA." },
+            { icon: CreditCard, title: "Premium Cards", desc: "Access exclusive lifetime-free (LTF) credit cards with zero annual fees from India's leading banks — IndusInd, Bank of Baroda, AU, Federal, Scapia, HSBC, Yes Bank, IDFC First & Kotak Mahindra. Enjoy airport lounge access, rewarding cashback on daily spends, fuel surcharge waivers, and premium travel perks. Eligibility: 650+ CIBIL score with no minimum income requirement." },
 
-            { icon: Wallet, title: "Dynamic Loans", desc: "Personal loans from ₹50,000–₹40 lakh at 9.99%–16.50% p.a. (SBI from 10%, HDFC from 10.50%, ICICI from 10.75%). Home loans starting at 7.50% p.a. (SBI), 7.90% (HDFC). 24-hour digital processing for pre-approved customers. Tenure up to 60 months. Better rates for 750+ CIBIL scores." },
+            { icon: Wallet, title: "Dynamic Loans", desc: "Unlock financial freedom with personal loans ranging from ₹50,000 to ₹50,00,000 at competitive interest rates starting at 8.75% p.a. — with no minimum income documentation required. Home loans (BCI) available for applicants with a 650+ CIBIL score. Enjoy 24-hour digital processing for pre-approved customers with flexible tenure options and better rates for higher CIBIL scores." },
 
-            { icon: ShieldCheck, title: "Life Security", desc: "₹1 Crore term life cover from ₹440/month (0% GST since Sept 2025). A healthy 25-year-old non-smoker pays just ₹522/month until age 60. Add critical illness & accidental death riders. Top insurers with 99%+ claim settlement ratios. Premiums lock in at purchase age — buy early, save more." },
+            { icon: ShieldCheck, title: "Life Security", desc: "Secure your family's future with lifetime (LIFR) insurance plans from Axis Max Life and HDFC Life. Get ₹1 Crore term life coverage starting at just ₹440/month. A healthy 25-year-old non-smoker pays as low as ₹522/month until age 60. Enhance your protection with critical illness and accidental death riders. All plans offered through insurers with 99%+ claim settlement ratios. Lock in your premium early — the younger you start, the more you save." },
 
-            { icon: HeartPulse, title: "Health Assets", desc: "Cashless health insurance across 10,000–20,000+ network hospitals (HDFC ERGO, Star Health, ICICI Lombard, Niva Bupa). Family floater plans (₹10L cover, family of 3) from ₹14,000–₹22,000/year. Tax deduction up to ₹25,000/year under Sec 80D. Healthcare costs in India rising 14% annually — cover yourself now." },
+            { icon: HeartPulse, title: "Health Assets", desc: "Protect your health with comprehensive cashless insurance through Care Health, covering 10,000+ network hospitals across India. Family floater plans (₹10 Lakh cover for a family of 3) start from just ₹14,000–₹22,000 per year. Claim tax deductions up to ₹25,000 annually under Section 80D. With healthcare costs in India rising at 14% per year, securing the right cover today is a smart financial decision." },
 
-            { icon: Building2, title: "Business Coverage", desc: "Protect your enterprise from fire, transit loss, professional liability, and operational risks. Comprehensive SME and corporate insurance plans customized for Chandigarh's growing business ecosystem. Covers inventory, assets, and liabilities under a single policy with minimal documentation and fast claim processing." },
+            { icon: Building2, title: "Business Coverage", desc: "Safeguard your enterprise with tailored business insurance covering fire damage, transit loss, professional liability, and operational risks. Our comprehensive SME and corporate plans are customized for Chandigarh's growing business ecosystem — protecting your inventory, assets, and liabilities under a single policy with minimal documentation and swift claim processing." },
 
-            { icon: Home, title: "Property Hub", desc: "Expert Tricity real estate advisory — Chandigarh premium sectors at ₹9,700–₹15,100/sq.ft, Mohali at ₹4,950–₹6,500/sq.ft, and Panchkula for lifestyle investing. Mohali commercial yields 8–12% annually. Sectors like 48 & Mullanpur saw 95%+ appreciation in 3 years. RERA-verified listings only." },
+            { icon: Home, title: "Property Hub", desc: "Navigate Tricity real estate with confidence through our expert advisory services. Chandigarh's premium sectors are priced at ₹9,700–₹15,100/sq.ft, Mohali at ₹4,950–₹6,500/sq.ft, and Panchkula offers excellent lifestyle investment opportunities. Mohali commercial properties yield 8–12% annually, while Sectors 48 and Mullanpur have recorded 95%+ appreciation over just 3 years. All listings are RERA-verified for your peace of mind." },
           ] as { icon: LucideIcon; title: string; desc: string }[]).map((item, i) => (
             <ServiceCard key={i} {...item} delay={i * 100} />
           ))}
