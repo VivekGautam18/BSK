@@ -298,7 +298,7 @@ const HomeView = ({ setView }: HomeViewProps) => (
           {([
             // Replace only the services array inside HomeView's services section:
 
-            { icon: CreditCard, title: "Premium Cards", desc: "Access exclusive lifetime-free (LTF) credit cards with zero annual fees from India's leading banks — IndusInd, Bank of Baroda, AU, Federal, Scapia, HSBC, Yes Bank, IDFC First & Kotak Mahindra. Enjoy airport lounge access, rewarding cashback on daily spends, fuel surcharge waivers, and premium travel perks. Eligibility: 650+ CIBIL score with no minimum income requirement." },
+            { icon: CreditCard, title: "Premium Cards", desc: "Access exclusive lifetime-free (LTF) credit cards with zero annual fees from India's leading banks — HDFC, ICICI , SBI, IndusInd, Bank of Baroda, AU, Federal, Scapia, HSBC, Yes Bank, IDFC First & Kotak Mahindra. Enjoy airport lounge access, rewarding cashback on daily spends, fuel surcharge waivers, and premium travel perks. Eligibility: 650+ CIBIL score with no minimum income requirement." },
 
             { icon: Wallet, title: "Dynamic Loans", desc: "Unlock financial freedom with personal loans ranging from ₹50,000 to ₹50,00,000 at competitive interest rates starting at 8.75% p.a. — with no minimum income documentation required. Home loans (BCI) available for applicants with a 650+ CIBIL score. Enjoy 24-hour digital processing for pre-approved customers with flexible tenure options and better rates for higher CIBIL scores." },
 
