@@ -244,13 +244,13 @@ const HomeView = ({ setView }: HomeViewProps) => (
         <div className="space-y-10">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
-            <span className="text-[10px] font-black text-blue-100 uppercase tracking-[0.2em]">Partnered with 15+ Major Banks</span>
+            <span className="text-[10px] font-black text-blue-100 uppercase tracking-[0.2em]">Partnered with 150+ Banks and NBFC</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
             Smart Capital. <br /> <span className="text-blue-500">Expert Care.</span>
           </h1>
           <p className="text-xl text-blue-100/60 max-w-xl leading-relaxed font-medium">
-            Navigating the complex world of finance so you don't have to. From elite credit cards to complex property advisory, BSK is your Chandigarh headquarters for growth.
+            Navigating the complex world of finance so you don't have to. From elite credit cards, personal loan and insurance to complex property advisory, BSK is your Chandigarh headquarters for growth.
           </p>
           <div className="flex flex-wrap gap-5">
             <button
