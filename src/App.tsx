@@ -518,7 +518,7 @@ const Footer = () => {
   const socialLinks = [
     { Icon: Globe, href: "https://bskfsolutions.com/", label: "Website" },
     { Icon: Instagram, href: "https://www.instagram.com/bsk_financial_?utm_source=qr", label: "Instagram" },
-    { Icon: X, href: "#", label: "Twitter/X" },
+    { Icon: X, href: "https://www.justdial.com/Chandigarh/Bsk-Financial-Solutions-Service-Near-Bank-Of-India-Hallomajra/0172PX172-X172-240914133945-D1F7_BZDET", label: "JustDial" },
     { Icon: Linkedin, href: "#", label: "LinkedIn" }
   ];
 
