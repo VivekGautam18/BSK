@@ -518,8 +518,8 @@ const Footer = () => {
   const socialLinks = [
     { Icon: Globe, href: "https://bskfsolutions.com/", label: "Website" },
     { Icon: Instagram, href: "https://www.instagram.com/bsk_financial_?utm_source=qr", label: "Instagram" },
-    { Icon: X, href: "https://twitter.com/yourhandle", label: "Twitter/X" },
-    { Icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" }
+    { Icon: X, href: "#", label: "Twitter/X" },
+    { Icon: Linkedin, href: "#", label: "LinkedIn" }
   ];
 
   return (
