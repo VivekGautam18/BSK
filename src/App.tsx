@@ -16,7 +16,9 @@ import {
   ArrowRight,
   Globe,
   Link,
-  type LucideIcon
+  type LucideIcon,
+  Instagram,
+  Linkedin
 } from 'lucide-react';
 
 // --- Custom Hooks ---
@@ -511,62 +513,139 @@ const Contact = () => {
 
 // --- Footer ---
 
-const Footer = () => (
-  <footer className="bg-[#010816] text-white pt-32 pb-16 border-t border-white/5">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="grid md:grid-cols-4 gap-16 mb-24">
-        <div className="col-span-1 md:col-span-2 space-y-8">
-          <div className="flex items-center gap-4">
-            <img src="/logo.jpeg" alt="BSK Logo" className="w-12 h-12 rounded-xl object-contain shadow-blue-200 shadow-xl" />
-            <h2 className="text-3xl font-black tracking-tighter">BSK FINANCIAL</h2>
-          </div>
-          <p className="text-blue-100/40 max-w-sm leading-relaxed font-medium">
-            Redefining financial consultancy through transparency, expertise, and a relentless commitment to client success since 2012.
-          </p>
-          <div className="flex gap-4">
-            {([Globe, Link, X] as LucideIcon[]).map((Icon, i) => (
-              <button key={i} className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group">
-                <Icon size={20} className="text-slate-400 group-hover:text-white transition-colors" />
-              </button>
-            ))}
-          </div>
-        </div>
+const Footer = () => {
+  // Define your social links here for easy editing
+  const socialLinks = [
+    { Icon: Globe, href: "https://bskfsolutions.com/", label: "Website" },
+    { Icon: Instagram, href: "https://www.instagram.com/bsk_financial_?utm_source=qr", label: "Instagram" },
+    { Icon: X, href: "https://twitter.com/yourhandle", label: "Twitter/X" },
+    { Icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" }
+  ];
 
-        <div>
-          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Navigation</h4>
-          <ul className="space-y-4 text-sm font-bold text-slate-500">
-            <li><a href="#" className="hover:text-white transition-colors">Strategic Assets</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Banking Partners</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Career Pathways</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Legal & Compliance</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Headquarters</h4>
-          <div className="space-y-6">
-            <p className="text-sm text-slate-500 font-bold leading-relaxed">
-              Deep Complex, 1st Floor,<br />
-              Hallo Majra, Chandigarh, 160002
+  return (
+    <footer className="bg-[#010816] text-white pt-32 pb-16 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-16 mb-24">
+          <div className="col-span-1 md:col-span-2 space-y-8">
+            <div className="flex items-center gap-4">
+              <img src="/logo.jpeg" alt="BSK Logo" className="w-12 h-12 rounded-xl object-contain shadow-blue-200 shadow-xl" />
+              <h2 className="text-3xl font-black tracking-tighter">BSK FINANCIAL</h2>
+            </div>
+            <p className="text-blue-100/40 max-w-sm leading-relaxed font-medium">
+              Redefining financial consultancy through transparency, expertise, and a relentless commitment to client success since 2012.
             </p>
-            <div className="space-y-1">
-              <p className="text-[10px] font-black text-slate-700 uppercase">Director</p>
-              <p className="font-black text-blue-100">Satvinder Choudhary</p>
+            
+            {/* Social Links Section */}
+            <div className="flex gap-4">
+              {socialLinks.map(({ Icon, href, label }, i) => (
+                <a 
+                  key={i} 
+                  href={href}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group"
+                >
+                  <Icon size={20} className="text-slate-400 group-hover:text-white transition-colors" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* ... Rest of your code (Navigation, Headquarters, etc.) ... */}
+          <div>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Navigation</h4>
+            <ul className="space-y-4 text-sm font-bold text-slate-500">
+              <li><a href="#" className="hover:text-white transition-colors">Strategic Assets</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Banking Partners</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Career Pathways</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Legal & Compliance</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Headquarters</h4>
+            <div className="space-y-6">
+              <p className="text-sm text-slate-500 font-bold leading-relaxed">
+                Deep Complex, 1st Floor,<br />
+                Hallo Majra, Chandigarh, 160002
+              </p>
+              <div className="space-y-1">
+                <p className="text-[10px] font-black text-slate-700 uppercase">Director</p>
+                <p className="font-black text-blue-100">Satvinder Choudhary</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-        <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">© 2024 BSK Financial Solution Services. Crafted for excellence.</p>
-        <div className="flex gap-8 text-[10px] font-black text-slate-700 uppercase tracking-widest">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Term of Service</a>
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">© 2024 BSK Financial Solution Services. Crafted for excellence.</p>
+          <div className="flex gap-8 text-[10px] font-black text-slate-700 uppercase tracking-widest">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Term of Service</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
+
+// const Footer = () => (
+//   <footer className="bg-[#010816] text-white pt-32 pb-16 border-t border-white/5">
+//     <div className="max-w-7xl mx-auto px-6">
+//       <div className="grid md:grid-cols-4 gap-16 mb-24">
+//         <div className="col-span-1 md:col-span-2 space-y-8">
+//           <div className="flex items-center gap-4">
+//             <img src="/logo.jpeg" alt="BSK Logo" className="w-12 h-12 rounded-xl object-contain shadow-blue-200 shadow-xl" />
+//             <h2 className="text-3xl font-black tracking-tighter">BSK FINANCIAL</h2>
+//           </div>
+//           <p className="text-blue-100/40 max-w-sm leading-relaxed font-medium">
+//             Redefining financial consultancy through transparency, expertise, and a relentless commitment to client success since 2012.
+//           </p>
+//           <div className="flex gap-4">
+//             {([Globe, Link, X] as LucideIcon[]).map((Icon, i) => (
+//               <button key={i} className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group">
+//                 <Icon size={20} className="text-slate-400 group-hover:text-white transition-colors" />
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div>
+//           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Navigation</h4>
+//           <ul className="space-y-4 text-sm font-bold text-slate-500">
+//             <li><a href="#" className="hover:text-white transition-colors">Strategic Assets</a></li>
+//             <li><a href="#" className="hover:text-white transition-colors">Banking Partners</a></li>
+//             <li><a href="#" className="hover:text-white transition-colors">Career Pathways</a></li>
+//             <li><a href="#" className="hover:text-white transition-colors">Legal & Compliance</a></li>
+//           </ul>
+//         </div>
+
+//         <div>
+//           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-500 mb-8">Headquarters</h4>
+//           <div className="space-y-6">
+//             <p className="text-sm text-slate-500 font-bold leading-relaxed">
+//               Deep Complex, 1st Floor,<br />
+//               Hallo Majra, Chandigarh, 160002
+//             </p>
+//             <div className="space-y-1">
+//               <p className="text-[10px] font-black text-slate-700 uppercase">Director</p>
+//               <p className="font-black text-blue-100">Satvinder Choudhary</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+//         <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">© 2024 BSK Financial Solution Services. Crafted for excellence.</p>
+//         <div className="flex gap-8 text-[10px] font-black text-slate-700 uppercase tracking-widest">
+//           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+//           <a href="#" className="hover:text-white transition-colors">Term of Service</a>
+//         </div>
+//       </div>
+//     </div>
+//   </footer>
+// );
 
 // --- Main App ---
 
