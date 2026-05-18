@@ -468,7 +468,7 @@ const Contact = () => {
               <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-colors">
                 <Mail className="text-blue-600 mb-4" size={24} />
                 <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Email Inquiry</p>
-                <p className="text-lg font-black text-slate-900">kumar.satvinder5@gmail.com</p>
+                <p className="text-lg font-black text-slate-900">satvinder@bskfsolutions.com</p>
               </div>
             </div>
             <div className="bg-blue-50 p-8 rounded-3xl flex items-start gap-6 border border-blue-100">
