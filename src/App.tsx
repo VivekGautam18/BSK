@@ -409,7 +409,7 @@ const TeamView = () => (
           { name: "Sonam", role: "Senior Executive", image: "sonam.jpeg" },
           { name: "Arti", role: "Sales Executive", image: "Arti.jpeg" },
           { name: "Khushboo", role: "Executive", image: "khusboo.jpeg" },
-          { name: "Suhana", role: "HR Generalist", image: "Suhana.jpeg" },
+          { name: "Suhana", role: "HR Generalist", image: "suhana.jpeg" },
         ] as { name: string; role: string; image: string }[]).map((member, i) => (
           <TeamMember key={i} {...member} delay={i * 100} />
         ))}
