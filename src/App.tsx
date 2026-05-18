@@ -79,10 +79,11 @@ interface TeamMemberProps {
   name: string;
   role: string;
   image: string;
+  phone?: string;
   delay: number;
 }
 
-const TeamMember = ({ name, role, image, delay }: TeamMemberProps) => {
+const TeamMember = ({ name, role, image, phone, delay }: TeamMemberProps) => {
   const [ref, isVisible] = useScrollReveal();
   return (
     <div
@@ -101,7 +102,16 @@ const TeamMember = ({ name, role, image, delay }: TeamMemberProps) => {
       </div>
       <div className="p-8 text-center">
         <h4 className="text-xl font-black text-slate-900 mb-1">{name}</h4>
-        <p className="text-sm font-bold text-blue-600 uppercase tracking-widest">{role}</p>
+
+        <p className="text-sm font-bold text-blue-600 uppercase tracking-widest">
+          {role}
+        </p>
+
+        {phone && (
+          <p className="text-sm text-slate-500 mt-3 font-medium">
+            📞 {phone}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -409,8 +419,8 @@ const TeamView = () => (
           { name: "Sonam", role: "Senior Executive", image: "sonam.jpeg" },
           { name: "Arti", role: "Sales Executive", image: "Arti.jpeg" },
           { name: "Khushboo", role: "Executive", image: "khusboo.jpeg" },
-          { name: "Suhana", role: "HR Generalist", image: "suhana.jpeg" },
-        ] as { name: string; role: string; image: string }[]).map((member, i) => (
+          { name: "Suhana", role: "HR Generalist", image: "suhana.jpeg", phone: "+91 9876543210" },
+        ] as { name: string; role: string; image: string; phone?: string }[]).map((member, i) => (
           <TeamMember key={i} {...member} delay={i * 100} />
         ))}
       </div>
@@ -535,14 +545,14 @@ const Footer = () => {
             <p className="text-blue-100/40 max-w-sm leading-relaxed font-medium">
               Redefining financial consultancy through transparency, expertise, and a relentless commitment to client success since 2012.
             </p>
-            
+
             {/* Social Links Section */}
             <div className="flex gap-4">
               {socialLinks.map(({ Icon, href, label }, i) => (
-                <a 
-                  key={i} 
+                <a
+                  key={i}
                   href={href}
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
                   className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group"
